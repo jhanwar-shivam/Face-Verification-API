@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href={% static "style_profile.css" %}
+    />
+  </head>
+  <body>
+    <div class="form-container">
+      <div class="profile-info">
+        <h1>Profile</h1>
+        <div>
+          <label for="name">Name:</label>
+          <p>{{name}}</p>
+        </div>
+        <div>
+          <label for="verify">Verification:</label>
+          <p>Not Verified</p>
+          <form action="verification" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="file" id="digital-id" name="digital-id" required />
+            <input type="submit" value="Verify" />
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

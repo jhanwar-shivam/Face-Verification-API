@@ -1,0 +1,8 @@
+django
+pymongo
+numpy
+PIL
+dlib
+face_recognition
+cv2
+io

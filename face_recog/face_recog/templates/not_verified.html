@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+<link rel="stylesheet" type="text/css" href={% static "style_unverified.css" %} />
+  </head>
+  <body>
+    <div class="form-container">
+      <form>
+        <div class="profile-info">
+          <h1>Profile</h1>
+          <div>
+            <label for="name">Name:</label>
+            <p>{{name}}</p>
+          </div>
+          <div class="unverified">
+            <p>Face Not Matched, Verification unsuccessful</p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
